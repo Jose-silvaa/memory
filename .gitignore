@@ -10,6 +10,10 @@
 !.yarn/releases
 !.yarn/versions
 
+#FireBase
+firebase-debug.log
+firestore-debug.log
+
 # testing
 /coverage
 
