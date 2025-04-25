@@ -4,9 +4,12 @@ import { z } from "zod";
 export const userSchema = z.object({
     name: z.string().min(1, "Name is required"),
     email: z.string().email("Invalid email address"),
-    password: z.string().min(6, "Password must be at least 6 characters"),
-    birthday: z.string().optional(),
+    profilePhotoUrl: z.string().optional(),
+    createdAt: z.string().default(()=> new Date().toISOString()).optional(),
+    lastLogin: z.string().optional(),
 });
 
 // Gera o tipo TypeScript a partir do schema
 export type User = z.infer<typeof userSchema>;
+
+

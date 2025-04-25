@@ -1,4 +1,4 @@
-import { db } from "../firebase/config"; // ou onde você exporta seu Firestore
+import { db } from "@/firebase/config"; // ou onde você exporta seu Firestore
 import { collection, addDoc } from "firebase/firestore";
 
 async function createTestDoc() {
