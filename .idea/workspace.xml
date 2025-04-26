@@ -13,6 +13,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="unstable" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -40,7 +45,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "unstable",
+    "git-widget-placeholder": "86a82wx9q",
     "last_opened_file_path": "C:/Users/jvito/Development/Easy-Restaurant-Ui-V2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -83,6 +88,7 @@
       <workItem from="1745261361776" duration="11000" />
       <workItem from="1745261383168" duration="38000" />
       <workItem from="1745442904491" duration="120000" />
+      <workItem from="1745627714396" duration="2416000" />
     </task>
     <servers />
   </component>
