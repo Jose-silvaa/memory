@@ -2,6 +2,7 @@ import {User, userSchema} from "@/models/user/Users";
 import { collection, addDoc, getDocs} from "firebase/firestore";
 import { db } from "@/firebase/config";
 import {SuccessResponse, ErrorResponse} from "@/types/response";
+import {Timestamp} from "@firebase/firestore";
 
 export async function createUser(userData : User):Promise<SuccessResponse | ErrorResponse> {
 
@@ -9,6 +10,7 @@ export async function createUser(userData : User):Promise<SuccessResponse | Erro
         const docRef = await addDoc(collection(db, "users"), {
             name : userData.name,
             email : userData.email,
+            createdAt: Timestamp.now(),
         })
 
         return {
@@ -37,9 +39,10 @@ export async function getAllUsers(): Promise<User[]> {
     querySnapshot.forEach((doc) => {
         const data = doc.data();
 
+        //const convertTime = convertFirebaseTimestampToDateString(data.createdAt);
+
         const user = userSchema.parse({
             ...data,
-            createdAt: data.createdAt || new Date().toISOString(),
             lastLogin: data.lastLogin ?? undefined,
         });
         users.push(user)
